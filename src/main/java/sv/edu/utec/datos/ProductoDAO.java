@@ -19,7 +19,7 @@ public class ProductoDAO {
              Statement st = cn.createStatement()) {
 
             st.executeUpdate(sql);
-            System.out.println("Tabla producto lista.");
+
 
         } catch (SQLException e) {
             System.out.println("Error al crear la tabla: " + e.getMessage());
@@ -36,7 +36,7 @@ public class ProductoDAO {
             ps.setInt(2, producto.getCantidad());
             ps.executeUpdate();
 
-            System.out.println("Producto insertado correctamente.");
+
 
         } catch (SQLException e) {
             System.out.println("Error al insertar producto: " + e.getMessage());

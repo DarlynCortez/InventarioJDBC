@@ -11,13 +11,14 @@ public class Main {
 
         // Crear la tabla
         dao.crearTabla();
-
+        System.out.println("Tabla producto lista.");
         // Insertar productos de prueba
         dao.insertar(new Producto(1, "Laptop", 10));
         dao.insertar(new Producto(2, "Mouse", 25));
         dao.insertar(new Producto(3, "Teclado", 15));
-
+        System.out.println("Productos insetados.");
         // Listar productos
+
         System.out.println("\n--- LISTA DE PRODUCTOS ---");
 
         for (Producto producto : dao.listar()) {
