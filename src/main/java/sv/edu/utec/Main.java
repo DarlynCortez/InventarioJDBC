@@ -13,9 +13,9 @@ public class Main {
         dao.crearTabla();
 
         // Insertar productos de prueba
-        dao.insertar(new producto(0, "Laptop", 10));
-        dao.insertar(new producto(0, "Mouse", 25));
-        dao.insertar(new producto(0, "Teclado", 15));
+        dao.insertar(new producto(1, "Laptop", 10));
+        dao.insertar(new producto(2, "Mouse", 25));
+        dao.insertar(new producto(3, "Teclado", 15));
 
         // Listar productos
         System.out.println("\n--- LISTA DE PRODUCTOS ---");
