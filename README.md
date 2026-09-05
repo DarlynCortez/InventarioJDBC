@@ -46,6 +46,5 @@ específicamente para:
 - Aclarar dudas sobre el patrón DAO y la separación de responsabilidades entre capas
 
 
-Todo el código fue revisado
 
 
