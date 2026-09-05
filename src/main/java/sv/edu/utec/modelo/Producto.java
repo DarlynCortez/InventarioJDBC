@@ -1,15 +1,15 @@
 package sv.edu.utec.modelo;
 
-public class producto {
+public class Producto {
 
     private int id;
     private String nombre;
     private int cantidad;
 
-    public producto() {
+    public Producto() {
     }
 
-    public producto(int id, String nombre, int cantidad) {
+    public Producto(int id, String nombre, int cantidad) {
         this.id = id;
         this.nombre = nombre;
         this.cantidad = cantidad;

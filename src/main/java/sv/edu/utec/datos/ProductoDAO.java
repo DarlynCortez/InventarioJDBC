@@ -1,6 +1,6 @@
 package sv.edu.utec.datos;
 
-import sv.edu.utec.modelo.producto;
+import sv.edu.utec.modelo.Producto;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -26,7 +26,7 @@ public class ProductoDAO {
         }
     }
 
-    public void insertar(producto producto) {
+    public void insertar(Producto producto) {
         String sql = "INSERT INTO producto (nombre, cantidad) VALUES (?, ?)";
 
         try (Connection cn = ConexionDB.obtenerConexion();
@@ -43,8 +43,8 @@ public class ProductoDAO {
         }
     }
 
-    public List<producto> listar() {
-        List<producto> productos = new ArrayList<>();
+    public List<Producto> listar() {
+        List<Producto> productos = new ArrayList<>();
 
         String sql = "SELECT id, nombre, cantidad FROM producto ORDER BY id";
 
@@ -53,7 +53,7 @@ public class ProductoDAO {
              ResultSet rs = ps.executeQuery()) {
 
             while (rs.next()) {
-                producto producto = new producto(
+                Producto producto = new Producto(
                         rs.getInt("id"),
                         rs.getString("nombre"),
                         rs.getInt("cantidad")
@@ -69,7 +69,7 @@ public class ProductoDAO {
         return productos;
     }
 
-    public boolean actualizar(producto producto) {
+    public boolean actualizar(Producto producto) {
         String sql = "UPDATE producto SET nombre = ?, cantidad = ? WHERE id = ?";
 
         try (Connection cn = ConexionDB.obtenerConexion();

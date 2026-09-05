@@ -1,8 +1,8 @@
 package sv.edu.utec;
 
 import sv.edu.utec.datos.ProductoDAO;
-import sv.edu.utec.modelo.producto;
-
+import sv.edu.utec.modelo.Producto;
+import sv.edu.utec.modelo.Producto;
 public class Main {
 
     public static void main(String[] args) {
@@ -13,14 +13,14 @@ public class Main {
         dao.crearTabla();
 
         // Insertar productos de prueba
-        dao.insertar(new producto(1, "Laptop", 10));
-        dao.insertar(new producto(2, "Mouse", 25));
-        dao.insertar(new producto(3, "Teclado", 15));
+        dao.insertar(new Producto(1, "Laptop", 10));
+        dao.insertar(new Producto(2, "Mouse", 25));
+        dao.insertar(new Producto(3, "Teclado", 15));
 
         // Listar productos
         System.out.println("\n--- LISTA DE PRODUCTOS ---");
 
-        for (producto producto : dao.listar()) {
+        for (Producto producto : dao.listar()) {
             System.out.println(
                     "ID: " + producto.getId()
                             + " | Nombre: " + producto.getNombre()
@@ -29,7 +29,7 @@ public class Main {
         }
 
         // Actualizar producto
-        producto productoActualizar = new producto(1, "Laptop actualizada", 20);
+        Producto productoActualizar = new Producto(1, "Laptop actualizada", 20);
 
         if (dao.actualizar(productoActualizar)) {
             System.out.println("\nProducto actualizado correctamente.");
@@ -43,7 +43,7 @@ public class Main {
         // Listar nuevamente
         System.out.println("\n--- LISTA FINAL ---");
 
-        for (producto producto : dao.listar()) {
+        for (Producto producto : dao.listar()) {
             System.out.println(
                     "ID: " + producto.getId()
                             + " | Nombre: " + producto.getNombre()
