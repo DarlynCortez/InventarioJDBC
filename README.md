@@ -37,7 +37,7 @@ se registra el inventario de productos de una tienda, con los siguientes atribut
 
 Al ejecutar, se crea automáticamente el archivo inventario.mv.db en la raíz del proyecto con la tabla producto.
 
-## Uso de inteligencia artificial
+
 ## Uso de inteligencia artificial
 
 Se utilizó Claude (Anthropic) como apoyo durante el desarrollo del proyecto,
